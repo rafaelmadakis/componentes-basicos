@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView resultado;
     private CheckBox cbBranco, cbVerde,cbVermelho;
     List<String> check = new ArrayList<String>();
+    private RadioGroup rgEstoque;
 
 
     @Override
@@ -31,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
         cbBranco = findViewById(R.id.cbBranco);
         cbVerde = findViewById(R.id.cbVerde);
         cbVermelho = findViewById(R.id.cbVermelho);
+        rgEstoque = findViewById(R.id.rgEstoque);
+
+
+        verificaRadioButton();
     }
 
     public void verificaCheck(){
@@ -53,12 +59,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void verificaRadioButton(){
+
+        rgEstoque.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int i) {
+                if (i == R.id.rbSim){
+                    resultado.setText("Sim");
+                }else{
+                    resultado.setText("Não");
+                }
+            }
+        });
+
+
+    }
+
     public void btEnviar(View view) {
 
 //        String nomeProduto = campoProduto.getText().toString();
 //        resultado.setText(nomeProduto);
 
-        verificaCheck();
+//        verificaCheck();
+
 
     }
 }

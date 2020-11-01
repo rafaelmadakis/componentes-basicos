@@ -40,6 +40,32 @@
             android:layout_weight="1"
             android:text="Vermelho" />
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disponível em estoque" />
+
+        <RadioGroup
+            android:id="@+id/rgEstoque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/rbSim"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sim" />
+
+            <RadioButton
+                android:id="@+id/rbNao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Não" />
+        </RadioGroup>
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/etNomeProduto"
             android:layout_width="match_parent"
