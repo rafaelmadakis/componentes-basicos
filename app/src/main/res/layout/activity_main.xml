@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cores" />
+
+        <CheckBox
+            android:id="@+id/cbBranco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Branco" />
+
+        <CheckBox
+            android:id="@+id/cbVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Verde" />
+
+        <CheckBox
+            android:id="@+id/cbVermelho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vermelho" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etNomeProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="Nome do Produto" />
+
+        <Button
+            android:id="@+id/btEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btEnviar"
+            android:text="Enviar" />
+
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Resultado" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
